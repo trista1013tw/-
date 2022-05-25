@@ -37,40 +37,18 @@ let plus = document.getElementById("plus");
 let backbye = document.getElementById("backbye");
 
 function changecolor(){
-  if(color.src=="changecolor1.jpg"){
     color.src="changecolor2.png";
-  }
-  else if(color.src=="changecolor2.png"){
-    color.src="changecolor1.jpg";
-  }
 }
 function changeview(){
-  if(view.src=="fold.jpg"){
     view.src="fold2.png";
-  }
-  else if(view.src=="fold2.png"){
-    view.src="fold.jpg";
-  }
 }
 function changecom(){
-  if(plus.src=="mangobird.png"){
     plus.src="street.png";
     plus.style.width="250px";
     plus.style.height="450px";
-  }
-  else if(plus.src=="street.png"){
-    plus.src="mangobird.png";
-    plus.style.width="450px";
-    plus.style.height="250px";
-  }
 }
 function changeback(){
-  if(backbye.src=="images.jpg"){
     backbye.src="changeback.png";
-  }
-  else if(backbye.src=="changeback.png"){
-    backbye.src="images.jpg";
-  }
 }
 
 color.addEventListener("click",changecolor);
