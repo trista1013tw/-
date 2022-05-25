@@ -1,0 +1,12 @@
+.exview{
+    width: 250px;height: 450px;
+}
+.combine{
+    width: 450px;height: 250px;
+}
+.cut{
+    width:400px;height: 200px;
+}
+.gap{
+    padding:10px;
+}

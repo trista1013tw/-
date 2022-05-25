@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>portfolio</title>
+  <link rel="stylesheet" type="text/css" href="portfolio.css"/>
+</head>
+<body>
+  <h1>請點擊圖片</h1>
+<div style="margin:20px;display:flex;flex-wrap: wrap;">
+<div class="gap">
+<div>部分顏色抽換</div><br>
+<img src="C:/Tina/progress/photo/changecolor1.jpg" class="exview" id="color"/>
+</div>
+<div class="gap">
+<div>玻璃上面鑲上倒影</div>
+<img src="C:/Tina/progress/photo/fold.jpg" class="exview" id="view"/>
+</div>
+<div class="gap">
+<div>簡單合成</div>
+<img src="C:/Tina/progress/photo/mangobird.png" class="combine" id="plus"/>
+</div>
+<div class="gap">
+<div>複雜去背</div>
+<img src="C:/Tina/progress/photo/images.jpg" class="cut" id="backbye"/>
+</div>
+</div>
+<a href="index.html"><h1>點擊回首頁</h1></a>
+
+</body>
+<script>
+let color = document.getElementById("color");
+let view = document.getElementById("view");
+let plus = document.getElementById("plus");
+let backbye = document.getElementById("backbye");
+
+function changecolor(){
+  if(color.src==="file:///C:/Tina/progress/photo/changecolor1.jpg"){
+    color.src="file:///C:/Tina/progress/photo/changecolor2.png";
+  }
+  else if(color.src==="file:///C:/Tina/progress/photo/changecolor2.png"){
+    color.src="file:///C:/Tina/progress/photo/changecolor1.jpg";
+  }
+}
+function changeview(){
+  if(view.src==="file:///C:/Tina/progress/photo/fold.jpg"){
+    view.src="file:///C:/Tina/progress/photo/fold2.png";
+  }
+  else if(view.src==="file:///C:/Tina/progress/photo/fold2.png"){
+    view.src="file:///C:/Tina/progress/photo/fold.jpg";
+  }
+}
+function changecom(){
+  if(plus.src==="file:///C:/Tina/progress/photo/mangobird.png"){
+    plus.src="file:///C:/Tina/progress/photo/street.png";
+    plus.style.width="250px";
+    plus.style.height="450px";
+  }
+  else if(plus.src==="file:///C:/Tina/progress/photo/street.png"){
+    plus.src="file:///C:/Tina/progress/photo/mangobird.png";
+    plus.style.width="450px";
+    plus.style.height="250px";
+  }
+}
+function changeback(){
+  if(backbye.src==="file:///C:/Tina/progress/photo/images.jpg"){
+    backbye.src="file:///C:/Tina/progress/photo/changeback.png";
+  }
+  else if(backbye.src==="file:///C:/Tina/progress/photo/changeback.png"){
+    backbye.src="file:///C:/Tina/progress/photo/images.jpg";
+  }
+}
+
+color.addEventListener("click",changecolor);
+view.addEventListener("click",changeview);
+plus.addEventListener("click",changecom);
+backbye.addEventListener("click",changeback);
+</script>
+</html>
