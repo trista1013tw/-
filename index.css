@@ -4,6 +4,21 @@
     justify-content: end;
     text-align: center;
 }
+.list{
+    display: none;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+.list_choice{
+    width:30%;
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    padding: 10px;
+}
+.list_choice:hover{
+    background-color:#DCDCDC;
+}
 .item{
     padding: 20px;
     text-align: center;
