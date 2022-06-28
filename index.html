@@ -15,6 +15,19 @@
 
 <hr></hr>
 
+<!--作品及選單-->
+<div class="list" id="prolist">
+<div class="list_choice" onclick="document.location='portfolio.html'">AD Photoshope</div>
+<div class="list_choice" onclick="alert('就是這個網頁以及其他副網頁喔~');">網頁設計</div>
+<div class="list_choice" onclick="document.location='https://trista1013tw.github.io/VueLIST/'">簡易To do list</div>
+</div>
+
+<!--熱推薦選單-->
+<div class="list" id="relist">
+<div class="list_choice" onclick="alert('敬請期待!')">精進學習</div>
+<div class="list_choice" onclick="alert('敬請期待!')">旅遊休閒</div>
+<div class="list_choice" onclick="alert('敬請期待!')">時尚味覺</div>
+</div>
 <!--自我介紹-->
   
 <div id="me" style="display: none;">
@@ -48,6 +61,7 @@
   <br>trista1013tw@gmail.com
   <br>如果有任何疑問或合作歡迎聯繫我喔~~^_^
 </div>
+<div style="text-align:center">~以後這邊可能會有新文章喔~</div>
 </div>
   
 <img src="up.png" style="width:100%;padding-top: 30px;" id="pc2">
@@ -78,7 +92,7 @@
 
     <br>© 2022 Tina Huang. All rights reserved.<br>
     版權所有© 2022 Tina Huang
-    <br>info(TMI)：想去韓國吃炸醬麵~
+    <br>info(TMI)：台灣最近真的好會下雨
   </div>
 
 <script>
@@ -91,13 +105,16 @@ let pc1=document.getElementById("pc1");
 let pc2=document.getElementById("pc2");
 let me=document.getElementById("me");
 let ad=document.getElementById("ad");
-
+let relist=document.getElementById("relist");
+let prolist=document.getElementById("prolist");
 
 function showme(){
   me.style.display="block";
   pc2.style.display="none";
   ad.style.display="none";
   call.style.display="none";
+  relist.style.display="none";
+  prolist.style.display="none";
 }
 function shadow(){
   this.style.boxShadow="8px 8px 10px gray";
@@ -110,6 +127,8 @@ function callme(){
   me.style.display="none";
   pc2.style.display="none";
   ad.style.display="none";
+  relist.style.display="none";
+  prolist.style.display="none";
 }
 function renew(){
   call.style.display="none";
@@ -118,11 +137,18 @@ function renew(){
   ad.style.display="block";
 }
 function changepage(){
-  document.location.href="portfolio.html";
+  prolist.style.display="block";
+  prolist.style.display="flex";
+  prolist.style.justifyContent="center";
+  relist.style.display="none";
 }
 function omg(){
-  alert("Oops!這邊還沒編碼完成，請先逛其他地方~")
+  relist.style.display="block";
+  relist.style.display="flex";
+  relist.style.justifyContent="center";
+  prolist.style.display="none";
 }
+
 pc1.addEventListener("click",renew);
 aboutme.addEventListener("click",showme);
 aboutme.addEventListener("mouseover",shadow);
